@@ -1,0 +1,161 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "name": "🐾 OpenClaw",
+        "workspace": "~/.openclaw/workspace-main",
+        "model": "anthropic/claude-sonnet-4-5",
+        "default": true
+      },
+      {
+        "id": "planner",
+        "name": "🧠 Planner",
+        "workspace": "~/.openclaw/workspace-planner",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "ideator",
+        "name": "💡 Ideator",
+        "workspace": "~/.openclaw/workspace-ideator",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "critic",
+        "name": "🎯 Critic",
+        "workspace": "~/.openclaw/workspace-critic",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "surveyor",
+        "name": "📚 Surveyor",
+        "workspace": "~/.openclaw/workspace-surveyor",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "coder",
+        "name": "💻 Coder",
+        "workspace": "~/.openclaw/workspace-coder",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "writer",
+        "name": "✍️ Writer",
+        "workspace": "~/.openclaw/workspace-writer",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "reviewer",
+        "name": "🔍 Reviewer",
+        "workspace": "~/.openclaw/workspace-reviewer",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "scout",
+        "name": "📰 Scout",
+        "workspace": "~/.openclaw/workspace-scout",
+        "model": "anthropic/claude-sonnet-4-5"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "planner",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "ideator",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "critic",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "surveyor",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "coder",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "writer",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "reviewer",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    },
+    {
+      "agentId": "scout",
+      "match": {
+        "channel": "feishu",
+        "peer": {
+          "kind": "group",
+          "id": "oc_YOUR_GROUP_ID_HERE"
+        }
+      }
+    }
+  ],
+  "channels": {
+    "feishu": {
+      "groupPolicy": "open",
+      "requireMention": true,
+      "streaming": true,
+      "blockStreaming": true
+    }
+  }
+}
