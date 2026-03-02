@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/OpenClaw-Multi--Agent-blue?style=for-the-badge" alt="OpenClaw">
   <br/>
-  <img src="https://img.shields.io/badge/version-2.1.0-brightgreen?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.2.0-brightgreen?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License">
   <img src="https://img.shields.io/badge/agents-9-orange?style=flat-square" alt="Agents">
   <img src="https://img.shields.io/badge/channels-feishu%20%7C%20whatsapp%20%7C%20telegram%20%7C%20discord-purple?style=flat-square" alt="Channels">
@@ -35,7 +35,9 @@
 
 - 🤖 **9 pre-configured agents** with rich emoji identities for instant recognition in chat
 - 📝 **Agent self-merge** — deploys `BOOTSTRAP.md` for intelligent first-run setup
-- 🔗 **Channel routing** — auto-configured bindings for Feishu, WhatsApp, Telegram, Discord
+- 🔗 **Two Deployment Modes**: 
+  - **Channel Mode**: auto-routes agents to Feishu, WhatsApp, Telegram, Discord (supports individual groups)
+  - **Local Workflow Mode**: no channel required, agents communicate directly via `agentToAgent` tool
 - 📋 **4 workflow templates** — Paper Pipeline, Daily Digest, Brainstorm, Rebuttal
 - ⚔️ **Adversarial collaboration** — Ideator↔Critic and Writer↔Reviewer creative tension
 - 🎯 **SHARP taste gates** — quality checkpoints enforced by the Critic agent
@@ -87,23 +89,24 @@ else
 fi
 ```
 
-#### Step 1: Ask User About Configuration
+#### Step 1: Ask User About Deployment Mode
 
 Ask the user these questions:
 
-1. **Which channel do you use?** → `--channel feishu|whatsapp|telegram|discord|slack`
-2. **Default group ID** → `--group-id <ID>`
-   - Feishu: `oc_xxxxxxxxx`
-   - WhatsApp: `xxxxx@g.us`
-   - Telegram: `-1001234567890`
-3. **Per-agent group IDs?** (optional) → `--group-map 'coder=oc_aaa,scout=oc_bbb'`
-   - On Feishu, each sub-agent can bind to a different group
-   - Agents not in the map use the default `--group-id`
-4. **Which LLM model?** (default: `zai/glm-5`) → `--model <MODEL>`
+1. **Which deployment mode do you want?**
+   - **Mode 1 (Channel Mode)**: Deploy agents to Feishu, Slack, Telegram, etc.
+   - **Mode 2 (Local Workflow Mode)**: Use locally via CLI workflows. Agents talk to each other via the `agentToAgent` tool. (No channel needed).
+
+*(If Mode 1: Channel Mode)*
+2. **Which channel?** → `--channel feishu|whatsapp|...`
+3. **How to assign groups?**
+   - **All in one group**: provide one `--group-id <ID>`
+   - **Separate groups per agent**: interactively paste 8 different group IDs in the script.
+4. **需要 @mention 才回复吗？** → `--require-mention true|false`
+
+*(For both modes)*
+5. **Which LLM model?** (default: `zai/glm-5`) → `--model <MODEL>`
    - Different models per agent? → `--model-map 'coder=ollama/kimi-k2.5:cloud'`
-5. **需要 @mention 才回复吗？** → `--require-mention true|false`
-   - `true`（默认）：必须 @机器人 才回复
-   - `false`：自动响应所有消息
 
 #### Step 2: Clone and Run Setup
 
@@ -115,14 +118,24 @@ chmod +x setup.sh
 ```
 
 **Examples:**
+- **Interactive Setup** (Highly Recommended):
+  ```bash
+  ./setup.sh
+  ```
+  *(The script will elegantly ask you your mode, your channel, and let you paste your 8 group IDs one by one if desired).*
+
+- Local Workflow Mode: 
+  ```bash
+  ./setup.sh --mode local
+  ```
 - All agents in one Feishu group:
   ```bash
-  ./setup.sh --channel feishu --group-id oc_xxx
+  ./setup.sh --mode channel --channel feishu --group-id oc_xxx
   ```
-- Each agent in a different group:
+- Scripted per-agent groups:
   ```bash
-  ./setup.sh --channel feishu --group-id oc_default \
-    --group-map 'coder=oc_dev,scout=oc_news,reviewer=oc_review'
+  ./setup.sh --mode channel --channel feishu --group-id oc_default \
+    --group-map 'coder=oc_dev,scout=oc_news'
   ```
 - Custom models + no @mention:
   ```bash
@@ -514,6 +527,7 @@ openclaw-agents/
 
 | Flag | Description | Default |
 |------|-------------|---------|
+| `--mode` | Deployment config mode (`channel` or `local`) | Interactive |
 | `--channel` | Channel type (feishu/whatsapp/telegram/discord/slack) | Interactive prompt |
 | `--group-id` | Default group ID for all agents | Interactive prompt |
 | `--group-map` | Per-agent group overrides (`id=group_id,...`) | None |
