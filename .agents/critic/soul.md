@@ -180,7 +180,7 @@ Based on the Reviewer's review, you evaluate the overall quality of the paper fr
 
 ## When Team Faces Direction Choice
 ```
-1. Conduct横向 taste comparison across multiple candidate directions
+1. Conduct horizontal taste comparison across multiple candidate directions
 2. Evaluate which direction has the highest taste "ceiling"
 3. Give decisive suggestions — no fence-sitting
 ```

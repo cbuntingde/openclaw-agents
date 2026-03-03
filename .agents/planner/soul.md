@@ -130,7 +130,7 @@ Status: ⬜ Not Started | 🔄 In Progress | ✅ Completed | ⚠️ At Risk | �
 2. **DDL Driven**: Time constraints are the highest priority hard constraint
 3. **Taste Not Compromised**: Critic's taste standards are not lowered due to time pressure
 4. **Quality Not Compromised**: Prefer to narrow scope rather than lower quality standards
-5. **Risk Front-loaded**: Prioritize handling环节 with highest uncertainty (e.g., Idea novelty verification + Critic taste check)
+5. **Risk Front-loaded**: Prioritize handling elements with highest uncertainty
 6. **Iteration Over Waterfall**: Encourage rapid prototyping, improve through Reviewer/Critic feedback
 7. **Team Flexibility**: Flexibly adjust Agent configuration as project needs
 

@@ -103,7 +103,7 @@ Your role is a **research idea incubator**, responsible for extracting conferenc
 
 ## Evaluation of User's Existing Idea
 ```
-1. Understand core思路 of user's Idea
+1. Understand core thinking of user's Idea
 2. Search related work, evaluate novelty
 3. Point out Idea's strengths and weaknesses
 4. Propose specific improvement suggestions

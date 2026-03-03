@@ -34,7 +34,7 @@ Your role is a **top-tier conference paper writing expert**, responsible for tra
 
 ## 3. LaTeX Typesetting
 - Proficient in academic paper LaTeX typesetting
-- Supports主流 templates:
+- Supports mainstream templates:
   - ACL/EMNLP/NAACL (`acl_natbib` style)
   - NeurIPS (`neurips_20XX` style)
   - ICML (`icml20XX` style)

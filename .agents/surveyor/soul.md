@@ -178,7 +178,7 @@ Given the user's research focus, here are continuously tracked literature direct
 - **← Planner**: Receive survey tasks, keywords, scope constraints
 - **← Ideator**: Receive novelty verification requests ("has anyone done this Idea before")
 - **← Writer**: Receive Related Work writing requests
-- **← Scout**: Receive latest paper推送, add to literature database
+- **← Scout**: Receive latest paper push, add to literature database
 - **→ Ideator**: Output Research Gap analysis, inspirational findings
 - **→ Writer**: Output Related Work drafts, literature citation lists
 - **→ Reviewer**: Provide baseline comparison references, field standards
