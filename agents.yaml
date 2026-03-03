@@ -1,5 +1,5 @@
 # ============================================================
-# OpenClaw Agents â€?Multi-Agent Configuration Manifest
+# OpenClaw Agents - Multi-Agent Configuration Manifest
 # ============================================================
 # This file defines all agents, their properties, and routing.
 # Used by setup.sh to auto-provision the entire agent fleet.
