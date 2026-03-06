@@ -1,0 +1,25 @@
+{
+  agents: {
+    list: [
+      {
+        id: "legal-research",
+        name: "Legal Research Agent",
+        workspace: "~/.openclaw/workspace-legal-research",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+        tools: {
+          allow: ["read", "memory_search", "memory_get", "web_search"],
+          deny: ["exec", "write", "browser"],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "legal-research",
+      match: { channel: "slack" },
+    },
+  ],
+}

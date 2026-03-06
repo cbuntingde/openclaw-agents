@@ -1,0 +1,25 @@
+{
+  agents: {
+    list: [
+      {
+        id: "nda-review",
+        name: "NDA Review Agent",
+        workspace: "~/.openclaw/workspace-nda-review",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+        tools: {
+          allow: ["read", "memory_search", "memory_get"],
+          deny: ["exec", "write", "browser"],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "nda-review",
+      match: { channel: "slack" },
+    },
+  ],
+}
