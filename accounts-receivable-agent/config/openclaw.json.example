@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "accounts-receivable",
+        name: "Accounts Receivable Agent",
+        workspace: "~/.openclaw/workspace-accounts-receivable",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

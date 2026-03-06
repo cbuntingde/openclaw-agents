@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "supply-chain",
+        name: "Supply Chain Agent",
+        workspace: "~/.openclaw/workspace-supply-chain",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

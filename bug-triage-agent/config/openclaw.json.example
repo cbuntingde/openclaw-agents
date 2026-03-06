@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "bug-triage",
+        name: "Bug Triage Agent",
+        workspace: "~/.openclaw/workspace-bug-triage",
+        heartbeat: {
+          every: "2h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

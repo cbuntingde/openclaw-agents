@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "campaign-analytics",
+        name: "Campaign Analytics Agent",
+        workspace: "~/.openclaw/workspace-campaign-analytics",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

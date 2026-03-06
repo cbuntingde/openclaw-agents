@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "renewal-management",
+        name: "Renewal Management Agent",
+        workspace: "~/.openclaw/workspace-renewal-management",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

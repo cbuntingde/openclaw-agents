@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "benefits-admin",
+        name: "Benefits Admin Agent",
+        workspace: "~/.openclaw/workspace-benefits-admin",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

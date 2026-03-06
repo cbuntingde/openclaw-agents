@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "accounts-payable",
+        name: "Accounts Payable Agent",
+        workspace: "~/.openclaw/workspace-accounts-payable",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "financial-reporting",
+        name: "Financial Reporting Agent",
+        workspace: "~/.openclaw/workspace-financial-reporting",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

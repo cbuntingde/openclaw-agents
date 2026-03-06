@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "access-management",
+        name: "Access Management Agent",
+        workspace: "~/.openclaw/workspace-access-management",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

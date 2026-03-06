@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "facilities",
+        name: "Facilities Agent",
+        workspace: "~/.openclaw/workspace-facilities",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

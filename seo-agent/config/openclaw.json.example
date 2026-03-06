@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "seo",
+        name: "SEO Agent",
+        workspace: "~/.openclaw/workspace-seo",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

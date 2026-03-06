@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "payroll",
+        name: "Payroll Agent",
+        workspace: "~/.openclaw/workspace-payroll",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

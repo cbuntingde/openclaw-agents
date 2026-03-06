@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "user-feedback",
+        name: "User Feedback Agent",
+        workspace: "~/.openclaw/workspace-user-feedback",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

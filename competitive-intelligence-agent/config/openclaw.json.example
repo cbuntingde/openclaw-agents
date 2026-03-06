@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "competitive-intelligence",
+        name: "Competitive Intelligence Agent",
+        workspace: "~/.openclaw/workspace-competitive-intelligence",
+        heartbeat: {
+          every: "1d",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

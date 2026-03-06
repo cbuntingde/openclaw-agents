@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "server-monitor",
+        name: "Server Monitor Agent",
+        workspace: "~/.openclaw/workspace-server-monitor",
+        heartbeat: {
+          every: "15m",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

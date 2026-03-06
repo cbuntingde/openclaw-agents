@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "social-media",
+        name: "Social Media Agent",
+        workspace: "~/.openclaw/workspace-social-media",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

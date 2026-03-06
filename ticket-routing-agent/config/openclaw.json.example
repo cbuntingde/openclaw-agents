@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "ticket-routing",
+        name: "Ticket Routing Agent",
+        workspace: "~/.openclaw/workspace-ticket-routing",
+        heartbeat: {
+          every: "1h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

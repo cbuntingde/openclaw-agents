@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "deal-desk",
+        name: "Deal Desk Agent",
+        workspace: "~/.openclaw/workspace-deal-desk",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

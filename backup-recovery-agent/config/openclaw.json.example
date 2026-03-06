@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "backup-recovery",
+        name: "Backup & Recovery Agent",
+        workspace: "~/.openclaw/workspace-backup-recovery",
+        heartbeat: {
+          every: "4h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}
