@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "contracts", name: "Contract Review", workspace: "~/.openclaw/workspace-contracts" }],
+  },
+}

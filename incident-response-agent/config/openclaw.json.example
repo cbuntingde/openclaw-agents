@@ -1,0 +1,25 @@
+{
+  agents: {
+    list: [
+      {
+        id: "incidents",
+        name: "Incident Response",
+        workspace: "~/.openclaw/workspace-incidents",
+        heartbeat: {
+          every: "5m",
+          target: "slack",
+        },
+        tools: {
+          allow: ["read", "memory_search", "cron_list"],
+          deny: ["exec", "write", "browser"],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "incidents",
+      match: { channel: "slack" },
+    },
+  ],
+}

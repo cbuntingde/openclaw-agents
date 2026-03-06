@@ -1,0 +1,25 @@
+{
+  agents: {
+    list: [
+      {
+        id: "onboarding",
+        name: "Onboarding Specialist",
+        workspace: "~/.openclaw/workspace-onboarding",
+        heartbeat: {
+          every: "1h",
+          target: "slack",
+        },
+        tools: {
+          allow: ["read", "memory_search", "cron_list"],
+          deny: ["exec", "write", "browser"],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "onboarding",
+      match: { channel: "slack" },
+    },
+  ],
+}

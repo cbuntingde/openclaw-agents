@@ -1,0 +1,87 @@
+{
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      model: "anthropic/claude-sonnet-4-5",
+    },
+    list: [
+      {
+        id: "security",
+        name: "Security Sentinel",
+        workspace: "~/.openclaw/workspace-security",
+        agentDir: "~/.openclaw/agents/security/agent",
+        default: false,
+        model: "anthropic/claude-sonnet-4-5",
+        heartbeat: {
+          every: "15m",
+          target: "slack",
+          prompt: "Read HEARTBEAT.md if it exists. Check for vulnerabilities and alerts. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        sandbox: {
+          mode: "all",
+          scope: "agent",
+        },
+        tools: {
+          allow: [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          deny: [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "security",
+      match: {
+        channel: "slack",
+        accountId: "security-bot",
+      },
+    },
+  ],
+  channels: {
+    slack: {
+      accounts: {
+        "security-bot": {
+          token: "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  cron: {
+    enabled: true,
+    sessionRetention: "7d",
+  },
+  skills: {
+    entries: {
+      "secret-scanner": {
+        enabled: true,
+        env: { GITHUB_TOKEN: "YOUR_GITHUB_TOKEN" },
+      },
+      "vuln-monitor": {
+        enabled: true,
+      },
+      "cve-tracker": {
+        enabled: true,
+      },
+      "breach-checker": {
+        enabled: true,
+      },
+    },
+  },
+}

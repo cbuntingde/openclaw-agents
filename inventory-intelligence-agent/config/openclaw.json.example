@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "inventory", name: "Inventory Intelligence", workspace: "~/.openclaw/workspace-inventory" }],
+  },
+}

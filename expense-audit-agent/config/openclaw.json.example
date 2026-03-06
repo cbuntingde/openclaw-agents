@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "expenses", name: "Expense Audit", workspace: "~/.openclaw/workspace-expenses" }],
+  },
+}

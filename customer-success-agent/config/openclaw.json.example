@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "customer-success",
+        name: "Customer Success",
+        workspace: "~/.openclaw/workspace-customer-success",
+        heartbeat: {
+          every: "1h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

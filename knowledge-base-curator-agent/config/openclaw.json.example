@@ -1,0 +1,15 @@
+{
+  agents: {
+    list: [
+      {
+        id: "knowledge-base",
+        name: "Knowledge Base Curator",
+        workspace: "~/.openclaw/workspace-knowledge",
+        heartbeat: {
+          every: "2h",
+          target: "slack",
+        },
+      },
+    ],
+  },
+}

@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "vendors", name: "Vendor Management", workspace: "~/.openclaw/workspace-vendors" }],
+  },
+}

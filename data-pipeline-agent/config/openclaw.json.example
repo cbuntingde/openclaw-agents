@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "data-pipeline", name: "Data Pipeline Monitor", workspace: "~/.openclaw/workspace-data-pipeline" }],
+  },
+}

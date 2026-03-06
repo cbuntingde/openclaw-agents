@@ -1,0 +1,82 @@
+{
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      model: "anthropic/claude-sonnet-4-5",
+    },
+    list: [
+      {
+        id: "meetings",
+        name: "Meeting Intelligence",
+        workspace: "~/.openclaw/workspace-meetings",
+        agentDir: "~/.openclaw/agents/meetings/agent",
+        default: false,
+        model: "anthropic/claude-sonnet-4-5",
+        heartbeat: {
+          every: "1h",
+          target: "slack",
+          prompt: "Read HEARTBEAT.md if it exists. Check for action items due. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        sandbox: {
+          mode: "all",
+          scope: "agent",
+        },
+        tools: {
+          allow: [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          deny: [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "meetings",
+      match: {
+        channel: "slack",
+        accountId: "meetings-bot",
+      },
+    },
+  ],
+  channels: {
+    slack: {
+      accounts: {
+        "meetings-bot": {
+          token: "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  cron: {
+    enabled: true,
+  },
+  skills: {
+    entries: {
+      "transcript-parser": {
+        enabled: true,
+      },
+      "action-items": {
+        enabled: true,
+      },
+      "meeting-summarizer": {
+        enabled: true,
+      },
+    },
+  },
+}

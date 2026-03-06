@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "leads", name: "Lead Qualification", workspace: "~/.openclaw/workspace-leads" }],
+  },
+}

@@ -1,0 +1,94 @@
+{
+  agents: {
+    defaults: {
+      workspace: "~/.openclaw/workspace",
+      model: "anthropic/claude-sonnet-4-5",
+    },
+    list: [
+      {
+        id: "compliance",
+        name: "Compliance Officer",
+        workspace: "~/.openclaw/workspace-compliance",
+        agentDir: "~/.openclaw/agents/compliance/agent",
+        default: false,
+        model: "anthropic/claude-sonnet-4-5",
+        heartbeat: {
+          every: "30m",
+          target: "slack",
+          prompt: "Read HEARTBEAT.md if it exists. Check for upcoming deadlines and alerts. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        sandbox: {
+          mode: "all",
+          scope: "agent",
+        },
+        tools: {
+          allow: [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          deny: [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  bindings: [
+    {
+      agentId: "compliance",
+      match: {
+        channel: "slack",
+        accountId: "compliance-bot",
+      },
+    },
+    {
+      agentId: "compliance",
+      match: {
+        channel: "email",
+        accountId: "reports",
+      },
+    },
+  ],
+  channels: {
+    slack: {
+      accounts: {
+        "compliance-bot": {
+          token: "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+    whatsapp: {
+      dmPolicy: "allowlist",
+      allowFrom: ["+1555COMPLIANCE"],
+    },
+  },
+  cron: {
+    enabled: true,
+    sessionRetention: "7d",
+  },
+  skills: {
+    entries: {
+      "compliance-monitor": {
+        enabled: true,
+      },
+      "audit-tracker": {
+        enabled: true,
+      },
+      "policy-alerts": {
+        enabled: true,
+      },
+    },
+  },
+}

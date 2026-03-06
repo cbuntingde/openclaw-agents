@@ -1,0 +1,5 @@
+{
+  agents: {
+    list: [{ id: "employee-exp", name: "Employee Experience", workspace: "~/.openclaw/workspace-employee-exp" }],
+  },
+}
