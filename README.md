@@ -199,6 +199,48 @@ A collection of professional AI agents for the OpenClaw platform, designed to au
 
 ---
 
+## Pricing
+
+### Individual Agents
+
+| # | Agent | Skills | Price |
+|---|-------|--------|-------|
+| 1 | Compliance Officer Agent | 3 | $299 |
+| 2 | Security Sentinel Agent | 4 | $299 |
+| 3 | Lead Qualification Agent | 3 | $149 |
+| 4 | Data Pipeline Agent | 3 | $149 |
+| 5 | Expense Audit Agent | 3 | $149 |
+| 6 | Inventory Intelligence Agent | 3 | $149 |
+| 7 | Employee Experience Agent | 3 | $149 |
+| 8 | Budget Forecast Agent | 3 | $149 |
+| 9 | Vendor Management Agent | 3 | $149 |
+| 10 | Contract Review Agent | 4 | $199 |
+| 11 | Knowledge Base Curator Agent | 4 | $199 |
+| 12 | Customer Success Agent | 5 | $249 |
+| 13 | Incident Response Agent | 5 | $249 |
+| 14 | Onboarding Specialist Agent | 4 | $199 |
+| 15 | Meeting Intelligence Agent | 3 | $149 |
+
+### Bundle Pricing
+
+| Bundle | Agents | Price | Savings |
+|--------|--------|-------|---------|
+| Enterprise Security | Compliance Officer, Security Sentinel | $499 | $99 |
+| Sales & Marketing | Lead Qualification, Customer Success | $349 | $49 |
+| Operations | Data Pipeline, Expense Audit, Inventory Intelligence, Budget Forecast | $499 | $97 |
+| HR Suite | Employee Experience, Onboarding Specialist | $299 | $49 |
+| **All 15 Agents** | Full collection | **$1,999** | **$748** |
+
+### What's Included
+
+Each purchase includes:
+- Complete agent workspace files (skills, identity, memory structure)
+- Configuration templates
+- Setup instructions
+- README documentation
+
+---
+
 ## Quick Start
 
 ### Prerequisites
