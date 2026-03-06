@@ -21,6 +21,8 @@ A collection of professional AI agents for the OpenClaw platform, designed to au
 | 13 | Incident Response Agent | Monitors alerts, runs diagnostics, notifies on-call staff, generates post-mortems |
 | 14 | Onboarding Specialist Agent | Provisions accounts, sends welcome sequences, tracks onboarding progress |
 | 15 | Meeting Intelligence Agent | Extracts action items, decisions, deadlines from meeting transcripts |
+| 16 | Legal Research Agent | Case law research, regulatory tracking, legal document analysis |
+| 17 | NDA Review Agent | NDA analysis, signature tracking, expiration monitoring |
 
 ---
 
@@ -199,6 +201,28 @@ A collection of professional AI agents for the OpenClaw platform, designed to au
 
 ---
 
+### 16. Legal Research Agent
+**Directory:** `legal-research-agent/`
+
+| Skill | Description |
+|-------|-------------|
+| case-law-researcher | Research case law and legal precedents |
+| statute-tracker | Track regulatory and statutory changes |
+| legal-document-analyzer | Analyze and summarize legal documents |
+
+---
+
+### 17. NDA Review Agent
+**Directory:** `nda-review-agent/`
+
+| Skill | Description |
+|-------|-------------|
+| nda-analyzer | Analyze NDA terms and identify risks |
+| signature-tracker | Track NDA signature status |
+| expiration-monitor | Monitor NDA expiration dates and renewals |
+
+---
+
 ## Pricing
 
 ### Individual Agents
@@ -220,6 +244,8 @@ A collection of professional AI agents for the OpenClaw platform, designed to au
 | 13 | Incident Response Agent | 5 | $249 |
 | 14 | Onboarding Specialist Agent | 4 | $199 |
 | 15 | Meeting Intelligence Agent | 3 | $149 |
+| 16 | Legal Research Agent | 3 | $249 |
+| 17 | NDA Review Agent | 3 | $199 |
 
 ### Bundle Pricing
 
@@ -229,7 +255,7 @@ A collection of professional AI agents for the OpenClaw platform, designed to au
 | Sales & Marketing | Lead Qualification, Customer Success | $349 | $49 |
 | Operations | Data Pipeline, Expense Audit, Inventory Intelligence, Budget Forecast | $499 | $97 |
 | HR Suite | Employee Experience, Onboarding Specialist | $299 | $49 |
-| **All 15 Agents** | Full collection | **$1,999** | **$748** |
+| **All 17 Agents** | Full collection | **$2,499** | **$997** |
 
 ### What's Included
 
