@@ -1,303 +1,222 @@
 # Claw Skills - OpenClaw Enterprise Agents
 
-A collection of professional AI agents for the OpenClaw platform, designed to automate enterprise workflows across various business functions.
+A comprehensive collection of **57 professional AI agents** for the [OpenClaw](https://docs.openclaw.ai) platform, designed to automate enterprise workflows across every business function.
 
-## Agents Overview
+## Overview
 
-| # | Agent | Description |
-|---|-------|-------------|
-| 1 | Compliance Officer Agent | Monitors regulatory changes, tracks deadlines, generates compliance reports, alerts on risks |
-| 2 | Security Sentinel Agent | Detects exposed secrets, tracks vulnerabilities, alerts on CVEs, monitors for breaches |
-| 3 | Lead Qualification Agent | Qualifies leads, enriches data, routes to sales representatives |
-| 4 | Data Pipeline Agent | Monitors ETL jobs, alerts on failures, tracks data quality |
-| 5 | Expense Audit Agent | Reviews expense reports for policy violations, generates spend analytics |
-| 6 | Inventory Intelligence Agent | Predicts replenishment, tracks stock levels, generates procurement recommendations |
-| 7 | Employee Experience Agent | Monitors sentiment, manages recognition, handles employee requests |
-| 8 | Budget Forecast Agent | Analyzes spending patterns, predicts burn rate, alerts on budget thresholds |
-| 9 | Vendor Management Agent | Tracks SLA compliance, security ratings, vendor risk assessment |
-| 10 | Contract Review Agent | Analyzes contracts for risky clauses, tracks expirations, manages renewals |
-| 11 | Knowledge Base Curator Agent | Identifies content gaps, updates outdated docs, creates FAQs from support tickets |
-| 12 | Customer Success Agent | Monitors NPS, identifies at-risk customers, drives retention |
-| 13 | Incident Response Agent | Monitors alerts, runs diagnostics, notifies on-call staff, generates post-mortems |
-| 14 | Onboarding Specialist Agent | Provisions accounts, sends welcome sequences, tracks onboarding progress |
-| 15 | Meeting Intelligence Agent | Extracts action items, decisions, deadlines from meeting transcripts |
-| 16 | Legal Research Agent | Case law research, regulatory tracking, legal document analysis |
-| 17 | NDA Review Agent | NDA analysis, signature tracking, expiration monitoring |
+Each agent is a fully self-contained OpenClaw workspace with:
+- **AGENTS.md** - Operating instructions and memory rules
+- **SOUL.md** - Persona, tone, and boundaries  
+- **USER.md** - Target users and preferences
+- **IDENTITY.md** - Name, emoji, and identity
+- **HEARTBEAT.md** - Automated checklist items
+- **TOOLS.md** - Available skills and tools
+- **MEMORY.md** - Long-term curated memory
+- **memory/** - Daily activity logs
+- **skills/** - 2-5 specialized skills per agent
 
----
+## Agent Catalog
 
-## Detailed Skills by Agent
+### Finance & Accounting
 
-### 1. Compliance Officer Agent
-**Directory:** `compliance-officer-agent/`
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| treasury-agent | cashflow-forecaster, liquidity-monitor, investment-tracker | Cash flow forecasting, liquidity management, investment tracking |
+| audit-prep-agent | evidence-gatherer, findings-tracker, audit-documentation | Audit preparation, evidence collection, findings tracking |
+| tax-preparation-agent | deadline-tracker, document-gatherer, calculation-assistant | Tax deadlines, document collection, calculations |
+| collections-agent | payment-tracker, reminder-sender, dispute-handler | Accounts receivable, payment reminders, dispute resolution |
+| accounts-payable-agent | invoice-processor, payment-scheduler, vendor-payments | Invoice processing, payment scheduling |
+| accounts-receivable-agent | invoicing, payment-reconciliation, aging-reports | Invoicing, reconciliation, aging analysis |
+| financial-reporting-agent | report-generator, variance-analyzer, reconciliation | Financial reporting, variance analysis |
+| budget-forecast-agent | burn-forecaster, spending-analyzer, threshold-alerter | Budget forecasting, burn rate analysis |
+| expense-audit-agent | policy-checker, duplicate-finder, spend-analyzer | Expense compliance and audit |
 
-| Skill | Description |
-|-------|-------------|
-| compliance-monitor | Monitors regulatory changes from GDPR, HIPAA, SOC2, PCI-DSS, ISO 27001 |
-| audit-tracker | Manages compliance deadlines and audit schedules with reminders at 90/30/7/1 days |
-| policy-alerts | Generates and routes compliance alerts by severity level |
+### Human Resources
 
----
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| performance-review-agent | review-generator, goal-tracker, feedback-collector | Performance reviews, goal tracking, feedback collection |
+| learning-development-agent | training-tracker, certification-manager, course-recommender | Training management, certifications |
+| compensation-analyst-agent | pay-equity-analyzer, salary-benchmarker, increase-planner | Compensation analysis, pay equity |
+| workforce-planning-agent | headcount-planner, skills-gap-analyzer, succession-planner | Workforce strategy, headcount planning |
+| benefits-admin-agent | enrollment-processor, benefits-questions, compliance-tracker | Benefits administration |
+| payroll-agent | payroll-processor, tax-filer, exception-handler | Payroll processing |
+| onboarding-specialist-agent | account-provisioner, welcome-sequencer, task-tracker, feedback-collector | Employee onboarding |
+| employee-experience-agent | sentiment-monitor, recognition-manager, request-handler | Employee experience management |
 
-### 2. Security Sentinel Agent
-**Directory:** `security-sentinel-agent/`
+### IT & DevOps
 
-| Skill | Description |
-|-------|-------------|
-| secret-scanner | Scans repositories for exposed API keys, tokens, credentials |
-| vuln-monitor | Monitors dependencies for vulnerabilities via GitHub Dependabot, npm audit |
-| cve-tracker | Tracks and alerts on CVEs with severity-based routing |
-| breach-checker | Checks for compromised credentials via HaveIBeenPwned |
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| database-monitor-agent | query-performance, index-health, connection-pooling | Database performance monitoring |
+| cicd-pipeline-agent | build-monitor, deployment-tracker, failure-alerting | CI/CD pipeline management |
+| cloud-cost-agent | spend-tracker, savings-identifier, resource-optimizer | Cloud cost optimization |
+| server-monitor-agent | health-check, performance-monitor, capacity-planner | Server monitoring |
+| data-pipeline-agent | job-monitor, failure-alerter, quality-checker | Data pipeline management |
+| incident-response-agent | alert-monitor, diagnostics-runner, oncall-notifier, timeline-generator, postmortem-generator | Incident response |
+| backup-recovery-agent | backup-monitor, recovery-tester, retention-manager | Backup and recovery |
+| bug-triage-agent | bug-prioritizer, severity-assigner, assignee-recommender | Bug triage |
 
----
+### Legal & Compliance
 
-### 3. Lead Qualification Agent
-**Directory:** `lead-qualification-agent/`
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| contract-lifecycle-agent | contract-creator, negotiation-tracker, renewal-manager | Contract lifecycle management |
+| ip-management-agent | patent-tracker, trademark-tracker, copyright-tracker | Intellectual property management |
+| contract-review-agent | clause-analyzer, expiration-tracker, template-comparer, renewal-manager | Contract review |
+| legal-research-agent | case-law-researcher, statute-tracker, legal-document-analyzer | Legal research |
+| nda-review-agent | nda-analyzer, signature-tracker, expiration-monitor | NDA review |
+| compliance-officer-agent | compliance-monitor, audit-tracker, policy-alerts | Compliance management |
+| security-sentinel-agent | secret-scanner, vuln-monitor, cve-tracker, breach-checker | Security monitoring |
 
-| Skill | Description |
-|-------|-------------|
-| lead-qualifier | Qualifies leads based on criteria |
-| data-enricher | Enriches lead data with additional information |
-| lead-router | Routes qualified leads to sales representatives |
+### Customer Service
 
----
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| live-chat-routing-agent | chat-router, faq-handler, agent-assigner | Chat routing and FAQ handling |
+| nps-survey-agent | survey-sender, result-analyzer, trend-tracker | NPS survey management |
+| customer-success-agent | nps-monitor, churn-predictor, health-scorer, renewal-forecaster, engagement-tracker | Customer success |
+| ticket-routing-agent | ticket-triage, prioritizer, team-assigner | Support ticket routing |
+| user-feedback-agent | feedback-collector, sentiment-analyzer, feature-request-tracker | User feedback |
 
-### 4. Data Pipeline Agent
-**Directory:** `data-pipeline-agent/`
+### Product & Analytics
 
-| Skill | Description |
-|-------|-------------|
-| job-monitor | Monitors ETL jobs and pipeline status |
-| failure-alerter | Alerts on pipeline failures |
-| quality-checker | Checks data quality metrics |
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| product-analytics-agent | metric-tracker, insight-generator, dashboard-builder | Product analytics |
+| user-research-agent | survey-conductor, feedback-analyzer, pattern-detector | User research |
+| campaign-analytics-agent | performance-dashboard, attribution-tracker, ab-tester | Marketing analytics |
+| competitive-intelligence-agent | competitor-tracker, winloss-analyzer, market-signals | Competitive intelligence |
+| seo-agent | keyword-tracker, content-optimizer, ranking-monitor | SEO management |
+| social-media-agent | post-scheduler, engagement-monitor, sentiment-tracker | Social media management |
 
----
+### Executive & Strategy
 
-### 5. Expense Audit Agent
-**Directory:** `expense-audit-agent/`
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| board-reporting-agent | metric-gatherer, presentation-builder, kpi-tracker | Board reporting |
+| strategic-planning-agent | market-analyzer, competitor-benchmarker, scenario-planner | Strategic planning |
+| deal-desk-agent | quote-generator, discount-approver, terms-validator | Deal desk management |
+| lead-qualification-agent | lead-qualifier, data-enricher, lead-router | Lead qualification |
+| meeting-intelligence-agent | transcript-parser, action-items, meeting-summarizer | Meeting intelligence |
 
-| Skill | Description |
-|-------|-------------|
-| policy-checker | Checks expense submissions for policy compliance |
-| duplicate-finder | Finds duplicate expense submissions |
-| spend-analyzer | Analyzes spending patterns and trends |
+### Operations
 
----
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| quality-assurance-agent | test-runner, defect-tracker, standard-validator | Quality assurance |
+| procurement-agent | purchase-processor, vendor-manager, order-tracker | Procurement management |
+| inventory-intelligence-agent | stock-monitor, replenishment-predictor, procurement-advisor | Inventory management |
+| facilities-agent | maintenance-scheduler, asset-tracker, work-order-manager | Facilities management |
+| supply-chain-agent | logistics-coordinator, shipment-tracker, vendor-coordinator | Supply chain management |
+| renewal-management-agent | renewal-tracker, churn-prevention, upsell-identifier | Subscription renewals |
+| vendor-management-agent | sla-monitor, security-tracker, risk-assessor | Vendor management |
+| knowledge-base-curator-agent | gap-detector, freshness-tracker, faq-generator, content-suggester | Knowledge base management |
 
-### 6. Inventory Intelligence Agent
-**Directory:** `inventory-intelligence-agent/`
+### Access & Identity
 
-| Skill | Description |
-|-------|-------------|
-| stock-monitor | Tracks stock levels across inventory |
-| replenishment-predictor | Predicts when reordering is needed |
-| procurement-advisor | Recommends purchases based on demand forecasting |
-
----
-
-### 7. Employee Experience Agent
-**Directory:** `employee-experience-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| sentiment-monitor | Tracks employee sentiment from surveys, Slack, reviews |
-| recognition-manager | Manages employee recognition programs |
-| request-handler | Handles employee requests and tickets |
-
----
-
-### 8. Budget Forecast Agent
-**Directory:** `budget-forecast-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| spending-analyzer | Analyzes spending patterns across departments |
-| burn-forecaster | Predicts burn rate and runway |
-| threshold-alerter | Alerts when budget thresholds are breached |
-
----
-
-### 9. Vendor Management Agent
-**Directory:** `vendor-management-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| sla-monitor | Tracks SLA compliance for vendors |
-| security-tracker | Monitors vendor security ratings |
-| risk-assessor | Assesses vendor risk levels |
-
----
-
-### 10. Contract Review Agent
-**Directory:** `contract-review-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| clause-analyzer | Analyzes contract clauses for risky terms |
-| expiration-tracker | Tracks contract deadlines and expirations |
-| template-comparer | Compares contracts against standard terms |
-| renewal-manager | Handles contract renewals |
-
----
-
-### 11. Knowledge Base Curator Agent
-**Directory:** `knowledge-base-curator-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| gap-detector | Identifies missing documentation |
-| freshness-tracker | Tracks document age and freshness |
-| faq-generator | Creates FAQs from support tickets |
-| content-suggester | Recommends content updates |
-
----
-
-### 12. Customer Success Agent
-**Directory:** `customer-success-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| nps-monitor | Tracks and analyzes Net Promoter Score |
-| churn-predictor | Identifies at-risk customers |
-| health-scorer | Calculates customer health scores |
-| renewal-forecaster | Predicts renewal outcomes |
-| engagement-tracker | Monitors product usage patterns |
-
----
-
-### 13. Incident Response Agent
-**Directory:** `incident-response-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| alert-monitor | Watches for alerts from monitoring systems |
-| diagnostics-runner | Runs automated diagnostic checks |
-| oncall-notifier | Alerts on-call staff |
-| timeline-generator | Creates incident timeline |
-| postmortem-generator | Generates post-incident reports |
-
----
-
-### 14. Onboarding Specialist Agent
-**Directory:** `onboarding-specialist-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| account-provisioner | Creates accounts across SaaS systems |
-| welcome-sequencer | Sends personalized onboarding emails |
-| task-tracker | Tracks onboarding checklist progress |
-| feedback-collector | Gathers onboarding feedback |
-
----
-
-### 15. Meeting Intelligence Agent
-**Directory:** `meeting-intelligence-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| transcript-parser | Parses meeting transcripts from Zoom, Teams, Meet |
-| action-items | Extracts tasks, owners, due dates |
-| meeting-summarizer | Generates concise meeting summaries |
-
----
-
-### 16. Legal Research Agent
-**Directory:** `legal-research-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| case-law-researcher | Research case law and legal precedents |
-| statute-tracker | Track regulatory and statutory changes |
-| legal-document-analyzer | Analyze and summarize legal documents |
-
----
-
-### 17. NDA Review Agent
-**Directory:** `nda-review-agent/`
-
-| Skill | Description |
-|-------|-------------|
-| nda-analyzer | Analyze NDA terms and identify risks |
-| signature-tracker | Track NDA signature status |
-| expiration-monitor | Monitor NDA expiration dates and renewals |
-
----
-
-## Pricing
-
-### Individual Agents
-
-| # | Agent | Skills | Price |
-|---|-------|--------|-------|
-| 1 | Compliance Officer Agent | 3 | $299 |
-| 2 | Security Sentinel Agent | 4 | $299 |
-| 3 | Lead Qualification Agent | 3 | $149 |
-| 4 | Data Pipeline Agent | 3 | $149 |
-| 5 | Expense Audit Agent | 3 | $149 |
-| 6 | Inventory Intelligence Agent | 3 | $149 |
-| 7 | Employee Experience Agent | 3 | $149 |
-| 8 | Budget Forecast Agent | 3 | $149 |
-| 9 | Vendor Management Agent | 3 | $149 |
-| 10 | Contract Review Agent | 4 | $199 |
-| 11 | Knowledge Base Curator Agent | 4 | $199 |
-| 12 | Customer Success Agent | 5 | $249 |
-| 13 | Incident Response Agent | 5 | $249 |
-| 14 | Onboarding Specialist Agent | 4 | $199 |
-| 15 | Meeting Intelligence Agent | 3 | $149 |
-| 16 | Legal Research Agent | 3 | $249 |
-| 17 | NDA Review Agent | 3 | $199 |
-
-### Bundle Pricing
-
-| Bundle | Agents | Price | Savings |
-|--------|--------|-------|---------|
-| Enterprise Security | Compliance Officer, Security Sentinel | $499 | $99 |
-| Sales & Marketing | Lead Qualification, Customer Success | $349 | $49 |
-| Operations | Data Pipeline, Expense Audit, Inventory Intelligence, Budget Forecast | $499 | $97 |
-| HR Suite | Employee Experience, Onboarding Specialist | $299 | $49 |
-| **All 17 Agents** | Full collection | **$2,499** | **$997** |
-
-### What's Included
-
-Each purchase includes:
-- Complete agent workspace files (skills, identity, memory structure)
-- Configuration templates
-- Setup instructions
-- README documentation
-
----
+| Agent | Skills | Description |
+|-------|--------|-------------|
+| access-management-agent | provisioner, access-reviewer, privileged-access | Access management |
 
 ## Quick Start
 
 ### Prerequisites
 
 - [OpenClaw](https://docs.openclaw.ai) v2026.1 or later
+- Node.js 18+ (for OpenClaw)
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <repo-url> claw-skills
+git clone https://github.com/cbuntingde/claw-skills.git
 
-# Navigate to an agent directory
-cd compliance-officer-agent
+# Choose an agent and copy to your OpenClaw workspace
+cp -r treasury-agent/workspace/* ~/.openclaw/workspace/
 
-# Create workspace
-mkdir -p ~/.openclaw/workspace-compliance
-cp -r workspace/* ~/.openclaw/workspace-compliance/
-
-# Copy configuration
-cp config/openclaw.json.example ~/.openclaw/openclaw.json
-
-# Register agent
-openclaw agents add compliance
-
-# Start gateway
-openclaw gateway restart
+# Configure the agent in ~/.openclaw/openclaw.json
 ```
 
+### Creating a New Agent
+
+Each agent follows the OpenClaw workspace structure:
+
+```
+<agent-name>/
+├── workspace/
+│   ├── AGENTS.md          # Role, responsibilities, heartbeats
+│   ├── SOUL.md           # Persona, identity, traits
+│   ├── USER.md           # Target users, contacts
+│   ├── IDENTITY.md       # Name, emoji, tagline
+│   ├── HEARTBEAT.md      # Checklist items
+│   ├── TOOLS.md          # Available skills
+│   ├── MEMORY.md         # Long-term memory
+│   └── memory/
+│       └── YYYY-MM-DD.md # Daily logs
+├── config/
+│   └── openclaw.json     # Agent configuration
+└── skills/
+    ├── <skill-1>/
+    │   └── SKILL.md
+    ├── <skill-2>/
+    │   └── SKILL.md
+    └── <skill-3>/
+        └── SKILL.md
+```
+
+### Skill Structure
+
+Each skill includes YAML frontmatter with OpenClaw metadata:
+
+```markdown
 ---
+name: my-skill
+description: A skill that does something useful
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": { "env": ["API_KEY"] },
+        "emoji": "🎯",
+      },
+  }
+---
+
+# My Skill
+
+Instructions for the agent...
+```
+
+## Architecture
+
+OpenClaw agents communicate via:
+- **Channels** - WhatsApp, Telegram, Discord, iMessage, Slack
+- **Skills** - Reusable capabilities with environment gating
+- **Heartbeats** - Periodic automated checks
+- **Cron Jobs** - Scheduled tasks
+- **Memory** - Persistent context via vector search
+
+## Documentation
+
+- [OpenClaw Docs](https://docs.openclaw.ai)
+- [Creating Skills](https://docs.openclaw.ai/tools/creating-skills.md)
+- [Multi-Agent Setup](https://docs.openclaw.ai/concepts/multi-agent.md)
+
+## Contributing
+
+To add a new agent:
+
+1. Create the agent directory structure
+2. Add all required workspace files
+3. Create 2-4 skills with proper YAML frontmatter
+4. Update this README with the new agent
+5. Submit a pull request
 
 ## License
 
-MIT License - see individual agent directories for details.
+MIT License - See individual agent directories for details.
+
+---
+
+**Total: 57 agents, 200+ skills**
