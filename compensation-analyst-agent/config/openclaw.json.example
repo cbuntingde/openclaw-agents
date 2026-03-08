@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "compensation",
+        "name": "Compensation Analyst Agent",
+        "workspace": "~/.openclaw/workspace-compensation",
+        "agentDir": "~/.openclaw/agents/compensation/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "1h",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check pay equity issues, market benchmark updates, and compensation planning. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "compensation",
+      "match": {
+        "channel": "slack",
+        "accountId": "compensation-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "compensation-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "pay-equity-analyzer": {
+        "enabled": true,
+      },
+      "salary-benchmarker": {
+        "enabled": true,
+      },
+      "increase-planner": {
+        "enabled": true,
+      },
+    },
+  },
+}

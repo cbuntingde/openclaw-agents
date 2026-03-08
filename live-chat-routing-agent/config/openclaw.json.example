@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "chat-routing",
+        "name": "Live Chat Routing Agent",
+        "workspace": "~/.openclaw/workspace-chat-routing",
+        "agentDir": "~/.openclaw/agents/chat-routing/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "5m",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check chat queue, FAQ responses, and agent availability. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "chat-routing",
+      "match": {
+        "channel": "slack",
+        "accountId": "chat-routing-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "chat-routing-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "chat-router": {
+        "enabled": true,
+      },
+      "faq-handler": {
+        "enabled": true,
+      },
+      "agent-assigner": {
+        "enabled": true,
+      },
+    },
+  },
+}

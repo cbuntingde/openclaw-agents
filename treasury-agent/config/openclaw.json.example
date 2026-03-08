@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "treasury",
+        "name": "Treasury Agent",
+        "workspace": "~/.openclaw/workspace-treasury",
+        "agentDir": "~/.openclaw/agents/treasury/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "30m",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check cash positions, liquidity status, and investment performance. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "treasury",
+      "match": {
+        "channel": "slack",
+        "accountId": "treasury-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "treasury-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "cashflow-forecaster": {
+        "enabled": true,
+      },
+      "liquidity-monitor": {
+        "enabled": true,
+      },
+      "investment-tracker": {
+        "enabled": true,
+      },
+    },
+  },
+}

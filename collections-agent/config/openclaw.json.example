@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "collections",
+        "name": "Collections Agent",
+        "workspace": "~/.openclaw/workspace-collections",
+        "agentDir": "~/.openclaw/agents/collections/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "1h",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check outstanding invoices, aging reports, and payment status. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "collections",
+      "match": {
+        "channel": "slack",
+        "accountId": "collections-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "collections-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "payment-tracker": {
+        "enabled": true,
+      },
+      "reminder-sender": {
+        "enabled": true,
+      },
+      "dispute-handler": {
+        "enabled": true,
+      },
+    },
+  },
+}

@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "workforce",
+        "name": "Workforce Planning Agent",
+        "workspace": "~/.openclaw/workspace-workforce",
+        "agentDir": "~/.openclaw/agents/workforce/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "1h",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check headcount planning, skills gap analysis, and succession planning. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "workforce",
+      "match": {
+        "channel": "slack",
+        "accountId": "workforce-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "workforce-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "headcount-planner": {
+        "enabled": true,
+      },
+      "skills-gap-analyzer": {
+        "enabled": true,
+      },
+      "succession-planner": {
+        "enabled": true,
+      },
+    },
+  },
+}

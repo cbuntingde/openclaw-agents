@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "cicd",
+        "name": "CI/CD Pipeline Agent",
+        "workspace": "~/.openclaw/workspace-cicd",
+        "agentDir": "~/.openclaw/agents/cicd/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "15m",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check build status, deployment progress, and failure alerts. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "cicd",
+      "match": {
+        "channel": "slack",
+        "accountId": "cicd-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "cicd-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "build-monitor": {
+        "enabled": true,
+      },
+      "deployment-tracker": {
+        "enabled": true,
+      },
+      "failure-alerting": {
+        "enabled": true,
+      },
+    },
+  },
+}

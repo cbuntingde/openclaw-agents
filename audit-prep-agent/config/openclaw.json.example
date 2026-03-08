@@ -1,0 +1,83 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.openclaw/workspace",
+      "model": "anthropic/claude-sonnet-4-5",
+    },
+    "list": [
+      {
+        "id": "audit-prep",
+        "name": "Audit Prep Agent",
+        "workspace": "~/.openclaw/workspace-audit-prep",
+        "agentDir": "~/.openclaw/agents/audit-prep/agent",
+        "default": false,
+        "model": "anthropic/claude-sonnet-4-5",
+        "heartbeat": {
+          "every": "30m",
+          "target": "slack",
+          "prompt": "Read HEARTBEAT.md if it exists. Check for pending evidence requests, review open findings status, verify deadlines. If nothing needs attention, reply HEARTBEAT_OK.",
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent",
+        },
+        "tools": {
+          "allow": [
+            "read",
+            "memory_search",
+            "memory_get",
+            "cron_list",
+            "cron_run",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+          ],
+          "deny": [
+            "write",
+            "edit",
+            "apply_patch",
+            "exec",
+            "browser",
+            "canvas",
+            "nodes",
+          ],
+        },
+      },
+    ],
+  },
+  "bindings": [
+    {
+      "agentId": "audit-prep",
+      "match": {
+        "channel": "slack",
+        "accountId": "audit-prep-bot",
+      },
+    },
+  ],
+  "channels": {
+    "slack": {
+      "accounts": {
+        "audit-prep-bot": {
+          "token": "xoxb-YOUR-SLACK-BOT-TOKEN",
+        },
+      },
+    },
+  },
+  "cron": {
+    "enabled": true,
+    "sessionRetention": "7d",
+  },
+  "skills": {
+    "entries": {
+      "evidence-gatherer": {
+        "enabled": true,
+      },
+      "findings-tracker": {
+        "enabled": true,
+      },
+      "audit-documentation": {
+        "enabled": true,
+      },
+    },
+  },
+}
