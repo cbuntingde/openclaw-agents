@@ -1,15 +1,31 @@
 ---
 name: sentiment-analyzer
-description: Analyze feedback sentiment
-metadata: {"openclaw": {"requires": {}}}
+description: Analyze sentiment and themes in user feedback
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": { "env": ["NLP_API_KEY"] },
+        "primaryEnv": "NLP_API_KEY",
+        "emoji": "💭",
+      },
+  }
 ---
 
-# Sentiment Analyzer
+# Sentiment Analyzer Skill
 
-Analyzes feedback sentiment.
+Analyze sentiment and identify themes in user feedback.
 
-## Capabilities
+## Sentiment Levels
 
-- Track sentiment
-- Identify trends
-- Flag concerns
+- Positive
+- Neutral
+- Negative
+- Mixed
+
+## Analysis
+
+- Overall sentiment score
+- Trend over time
+- Key themes identified
+- Emerging concerns

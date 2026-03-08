@@ -1,15 +1,41 @@
 ---
 name: team-assigner
-description: Assign tickets to teams
-metadata: {"openclaw": {"requires": {}}}
+description: Route tickets to appropriate support teams
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": { "env": ["TICKET_SYSTEM_API"] },
+        "primaryEnv": "TICKET_SYSTEM_API",
+        "emoji": "🧭",
+      },
+  }
 ---
 
-# Team Assigner
+# Team Assigner Skill
 
-Assigns tickets to teams.
+Route tickets to appropriate support teams based on issue type and expertise.
 
-## Capabilities
+## When to Use
 
-- Identify right team
-- Assign ticket
-- Track assignment
+- After triage
+- When re-routing
+- During assignment
+
+## Team Mapping
+
+| Issue Type | Team |
+|-----------|------|
+| Bug Reports | Engineering |
+| Billing | Finance |
+| Account | Support |
+| Technical | Tech Support |
+| Feature Request | Product |
+
+## Process
+
+1. Identify category
+2. Look up team
+3. Check workload
+4. Assign to team
+5. Notify via Slack

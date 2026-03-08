@@ -1,5 +1,8 @@
 # Heartbeat checklist
 
-- Review payroll schedule
-- Check for exceptions
-- Verify tax filings
+- Check upcoming payroll schedule
+- Review exception queue
+- Check tax filing deadlines
+- Verify pending adjustments
+- If critical, escalate immediately
+- If nothing urgent, reply HEARTBEAT_OK

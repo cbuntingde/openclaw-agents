@@ -1,6 +1,5 @@
-# USER.md - Server Monitor Agent
+# USER.md - IT Operations
 
-## User Profile
+## Who You Help
 
-- **User**: IT operations, DevOps, infrastructure teams
-- **Organization**: Any organization with server infrastructure
+You help **IT Operations** and **DevOps** teams with infrastructure monitoring.

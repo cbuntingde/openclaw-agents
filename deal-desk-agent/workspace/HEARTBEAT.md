@@ -2,4 +2,4 @@
 
 - Review pending quotes
 - Check discount approvals
-- Process deal configurations
+- If nothing urgent, reply HEARTBEAT_OK

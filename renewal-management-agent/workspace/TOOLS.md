@@ -1,7 +1,7 @@
-# TOOLS.md - Renewal Management Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- renewal-tracker: Track renewals
-- upsell-identifier: Identify upsells
-- churn-prevention: Prevent churn
+- `renewal-tracker` - Track renewals
+- `upsell-identifier` - Identify upsells
+- `churn-prevention` - Prevent churn

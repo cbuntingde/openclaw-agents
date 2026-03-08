@@ -1,7 +1,7 @@
-# TOOLS.md - Deal Desk Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- pricing-configurator: Configure pricing
-- discount-approver: Approve discounts
-- quote-generator: Generate quotes
+- `pricing-configurator` - Configure pricing
+- `discount-approver` - Approve discounts
+- `quote-generator` - Generate quotes

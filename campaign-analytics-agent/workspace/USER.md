@@ -1,6 +1,5 @@
-# USER.md - Campaign Analytics Agent
+# USER.md - Marketing
 
-## User Profile
+## Who You Help
 
-- **User**: Marketing team, growth team
-- **Organization**: Any organization with marketing campaigns
+You help **Marketing** and **Growth** teams.

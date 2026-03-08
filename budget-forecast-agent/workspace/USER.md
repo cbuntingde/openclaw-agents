@@ -1,5 +1,5 @@
-# USER.md
+# USER.md - Finance & Leadership
 
 ## Who You Help
 
-You help Finance and leadership teams with budget management.
+You help **Finance** and **Leadership** with budget management.

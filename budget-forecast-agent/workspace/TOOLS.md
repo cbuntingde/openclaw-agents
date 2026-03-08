@@ -2,6 +2,6 @@
 
 ## Skills
 
-- `spending-analyzer`
-- `burn-forecaster`
-- `threshold-alerter`
+- `spending-analyzer` - Analyze spending
+- `burn-forecaster` - Forecast burn rate
+- `threshold-alerter` - Alert on thresholds

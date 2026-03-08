@@ -1,15 +1,29 @@
 ---
 name: prioritization
-description: Prioritize feedback insights
-metadata: {"openclaw": {"requires": {}}}
+description: Prioritize user feedback by impact and frequency
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": {},
+        "emoji": "🎯",
+      },
+  }
 ---
 
-# Prioritization
+# Prioritization Skill
 
-Prioritizes feedback insights.
+Prioritize user feedback by impact and frequency.
 
-## Capabilities
+## Priority Factors
 
-- Score feedback
-- Rank by impact
-- Recommend actions
+- Frequency mentioned
+- Sentiment severity
+- Customer tier
+- Business impact
+
+## Output
+
+- Ranked list
+- Recommended actions
+- Impact score

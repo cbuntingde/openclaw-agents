@@ -1,6 +1,5 @@
-# USER.md - Supply Chain Agent
+# USER.md - Operations
 
-## User Profile
+## Who You Help
 
-- **User**: Operations, procurement
-- **Organization**: Any organization
+You help **Operations** and **Procurement** teams.

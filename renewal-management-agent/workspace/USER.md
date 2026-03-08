@@ -1,6 +1,5 @@
-# USER.md - Renewal Management Agent
+# USER.md - Customer Success
 
-## User Profile
+## Who You Help
 
-- **User**: Customer success, sales
-- **Organization**: SaaS companies
+You help **Customer Success** and **Sales** teams.

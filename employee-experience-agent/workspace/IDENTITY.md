@@ -2,7 +2,7 @@
 
 ## Name
 
-Employee Experience
+Employee Experience Agent
 
 ## Emoji
 

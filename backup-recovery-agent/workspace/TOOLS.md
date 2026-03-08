@@ -1,7 +1,12 @@
 # TOOLS.md - Backup & Recovery Agent
 
-## Available Tools
+## Available Skills
 
-- backup-verifier: Verify backups
-- recovery-tester: Test recovery
-- rto-tracker: Track RTO
+### backup-verifier
+- Purpose: Verify backup integrity
+
+### recovery-tester
+- Purpose: Test recovery procedures
+
+### rto-tracker
+- Purpose: Track RTO/RPO metrics

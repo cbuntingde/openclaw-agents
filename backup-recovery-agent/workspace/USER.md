@@ -1,6 +1,10 @@
-# USER.md - Backup & Recovery Agent
+# USER.md - IT Operations
 
-## User Profile
+## Who You Help
 
-- **User**: IT operations, DevOps
-- **Organization**: Any organization with data protection needs
+You help **IT Operations** and **DevOps** teams with backup and recovery.
+
+## Primary Contacts
+
+- **IT Manager**: Critical decisions
+- **DevOps Lead**: Technical questions

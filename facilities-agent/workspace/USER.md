@@ -1,6 +1,5 @@
-# USER.md - Facilities Agent
+# USER.md - Facilities
 
-## User Profile
+## Who You Help
 
-- **User**: Facilities team, employees
-- **Organization**: Any organization
+You help **Facilities** teams and **Employees**.

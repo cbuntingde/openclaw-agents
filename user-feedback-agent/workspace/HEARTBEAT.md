@@ -1,5 +1,7 @@
 # Heartbeat checklist
 
-- Review new feedback
+- Check for new feedback from all sources
 - Analyze sentiment trends
-- Prioritize insights
+- Review urgent feedback items
+- Generate daily summary
+- If nothing urgent, reply HEARTBEAT_OK

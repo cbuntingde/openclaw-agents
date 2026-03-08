@@ -2,7 +2,7 @@
 
 ## Name
 
-Data Pipeline Monitor
+Data Pipeline Agent
 
 ## Emoji
 

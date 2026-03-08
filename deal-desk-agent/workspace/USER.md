@@ -1,6 +1,5 @@
-# USER.md - Deal Desk Agent
+# USER.md - Sales
 
-## User Profile
+## Who You Help
 
-- **User**: Sales team, deal desk
-- **Organization**: B2B companies
+You help **Sales** and **Deal Desk** teams.

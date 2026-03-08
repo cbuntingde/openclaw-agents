@@ -1,5 +1,5 @@
-# USER.md
+# USER.md - Procurement & Security
 
 ## Who You Help
 
-You help Procurement and Security teams with vendor management.
+You help **Procurement** and **Security** teams.

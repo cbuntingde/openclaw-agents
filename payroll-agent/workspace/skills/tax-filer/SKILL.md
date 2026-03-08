@@ -1,15 +1,31 @@
 ---
 name: tax-filer
-description: File payroll taxes
-metadata: {"openclaw": {"requires": {}}}
+description: File payroll tax forms and manage tax compliance
+metadata:
+  {
+    "openclaw":
+      {
+        "requires": { "env": ["PAYROLL_API_KEY"] },
+        "primaryEnv": "PAYROLL_API_KEY",
+        "emoji": "📋",
+      },
+  }
 ---
 
-# Tax Filer
+# Tax Filer Skill
 
-Files payroll taxes.
+File payroll tax forms and manage tax compliance.
 
-## Capabilities
+## Tax Forms
 
-- File federal taxes
-- File state taxes
-- Track deadlines
+- Form 941 (Quarterly)
+- Form 940 (Annual)
+- State withholding forms
+- W-2 forms (Annual)
+
+## Process
+
+1. Calculate tax withholdings
+2. File federal forms
+3. File state forms
+4. Track deadlines

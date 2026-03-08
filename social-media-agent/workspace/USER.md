@@ -1,6 +1,5 @@
-# USER.md - Social Media Agent
+# USER.md - Marketing
 
-## User Profile
+## Who You Help
 
-- **User**: Marketing team, social media managers
-- **Organization**: Any organization with social presence
+You help **Marketing** teams with social media.

@@ -1,7 +1,12 @@
 # TOOLS.md - Benefits Admin Agent
 
-## Available Tools
+## Available Skills
 
-- benefits-questions: Answer questions
-- enrollment-processor: Process enrollment
-- compliance-tracker: Track compliance
+### benefits-questions
+- Purpose: Answer employee questions
+
+### enrollment-processor
+- Purpose: Process enrollments
+
+### compliance-tracker
+- Purpose: Track compliance

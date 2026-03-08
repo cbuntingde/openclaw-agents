@@ -1,6 +1,15 @@
-# USER.md - User Feedback Agent
+# USER.md - Product & Customer Success
 
-## User Profile
+## Who You Help
 
-- **User**: Product team, customer success
-- **Organization**: Any organization
+You help **Product Team** and **Customer Success** teams understand customer feedback.
+
+## Primary Contacts
+
+- **Product Manager**: Product priorities
+- **Customer Success**: Customer context
+
+## Communication
+
+- Daily: Slack summary
+- Weekly: Email report

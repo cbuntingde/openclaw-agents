@@ -1,6 +1,15 @@
-# USER.md - Payroll Agent
+# USER.md - HR & Finance
 
-## User Profile
+## Who You Help
 
-- **User**: HR, finance
-- **Organization**: Any organization with employees
+You help **HR** and **Finance** teams with payroll processing.
+
+## Primary Contacts
+
+- **HR Director**: Employee data
+- **Finance Lead**: Payroll approval
+
+## Communication
+
+- **Urgent**: Phone + Slack
+- **Reports**: Email

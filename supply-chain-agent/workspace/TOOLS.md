@@ -1,7 +1,7 @@
-# TOOLS.md - Supply Chain Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- order-tracker: Track orders
-- logistics-coordinator: Coordinate logistics
-- vendor-comm: Vendor communication
+- `order-tracker` - Track orders
+- `logistics-coordinator` - Coordinate logistics
+- `vendor-comm` - Vendor communication

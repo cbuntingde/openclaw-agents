@@ -1,7 +1,18 @@
 # TOOLS.md - Payroll Agent
 
-## Available Tools
+## Available Skills
 
-- payroll-processor: Process payroll
-- tax-filer: File taxes
-- exception-handler: Handle exceptions
+### payroll-processor
+- Purpose: Process payroll runs
+
+### tax-filer
+- Purpose: Handle tax filings
+
+### exception-handler
+- Purpose: Handle payroll exceptions
+
+## Conventions
+
+- Verify all calculations
+- Maintain audit trail
+- Handle sensitive data securely

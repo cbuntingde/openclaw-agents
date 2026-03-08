@@ -1,7 +1,7 @@
-# TOOLS.md - Facilities Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- maintenance-scheduler: Schedule maintenance
-- work-order-manager: Manage work orders
-- asset-tracker: Track assets
+- `maintenance-scheduler` - Schedule maintenance
+- `work-order-manager` - Manage work orders
+- `asset-tracker` - Track assets

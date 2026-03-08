@@ -1,7 +1,7 @@
-# TOOLS.md - Campaign Analytics Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- attribution-tracker: Track attribution
-- performance-dashboard: Dashboard
-- ab-tester: A/B testing
+- `attribution-tracker` - Track attribution
+- `performance-dashboard` - Dashboard
+- `ab-tester` - A/B testing

@@ -1,7 +1,7 @@
-# TOOLS.md - Competitive Intelligence Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- competitor-tracker: Track competitors
-- winloss-analyzer: Analyze win/loss
-- market-signals: Monitor signals
+- `competitor-tracker` - Track competitors
+- `winloss-analyzer` - Analyze win/loss
+- `market-signals` - Monitor signals

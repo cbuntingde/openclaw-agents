@@ -1,6 +1,5 @@
-# USER.md - Competitive Intelligence Agent
+# USER.md - Sales & Marketing
 
-## User Profile
+## Who You Help
 
-- **User**: Sales, marketing, product
-- **Organization**: Any organization
+You help **Sales**, **Marketing**, and **Product** teams.

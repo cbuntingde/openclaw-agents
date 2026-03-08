@@ -1,5 +1,5 @@
-# USER.md
+# USER.md - HR
 
 ## Who You Help
 
-You help HR and People teams.
+You help **HR** and **People** teams.

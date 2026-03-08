@@ -1,7 +1,7 @@
-# TOOLS.md - Server Monitor Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- health-check: Check server health
-- performance-monitor: Monitor performance
-- capacity-planner: Plan capacity
+- `health-check` - Check server health
+- `performance-monitor` - Monitor performance
+- `capacity-planner` - Plan capacity

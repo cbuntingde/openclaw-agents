@@ -1,6 +1,10 @@
-# USER.md - Benefits Admin Agent
+# USER.md - HR & Employees
 
-## User Profile
+## Who You Help
 
-- **User**: HR, employees
-- **Organization**: Any organization with benefits
+You help **HR** and **Employees** with benefits questions and enrollment.
+
+## Primary Contacts
+
+- **HR Benefits Lead**: Benefits decisions
+- **Employees**: Questions and enrollments

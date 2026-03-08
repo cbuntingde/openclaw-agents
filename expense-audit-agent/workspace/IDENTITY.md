@@ -2,7 +2,7 @@
 
 ## Name
 
-Expense Audit
+Expense Audit Agent
 
 ## Emoji
 

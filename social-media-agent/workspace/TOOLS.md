@@ -1,7 +1,7 @@
-# TOOLS.md - Social Media Agent
+# TOOLS.md
 
-## Available Tools
+## Skills
 
-- content-scheduler: Schedule content
-- engagement-tracker: Track engagement
-- sentiment-analyzer: Analyze sentiment
+- `content-scheduler` - Schedule posts
+- `engagement-tracker` - Track engagement
+- `sentiment-analyzer` - Analyze sentiment
