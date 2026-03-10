@@ -1,4 +1,6 @@
-# Claw Skills - OpenClaw Enterprise Agents
+# Enterprise Agents
+
+**All agents in this repository were created by Chris Bunting.**
 
 A comprehensive collection of **57 professional AI agents** for the [OpenClaw](https://docs.openclaw.ai) platform, designed to automate enterprise workflows across every business function.
 
@@ -130,7 +132,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 
 ```bash
 # Clone the repository
-git clone https://github.com/cbuntingde/claw-skills.git
+git clone https://github.com/cbuntingde/enterprise-agents.git
 
 # Choose an agent and copy to your OpenClaw workspace
 cp -r treasury-agent/workspace/* ~/.openclaw/workspace/
@@ -220,3 +222,7 @@ MIT License - See individual agent directories for details.
 ---
 
 **Total: 57 agents, 200+ skills**
+
+---
+
+Copyright (c) 2026 Chris Bunting. All rights reserved.
