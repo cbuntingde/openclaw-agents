@@ -1,20 +1,21 @@
 ---
 name: provisioner
-description: Provision and deprovision user access across systems
+description: Provision and deprovision user access across enterprise identity systems
+color: green
 metadata:
   {
-    "openclaw":
-      {
-        "requires": { "env": ["DIRECTORY_API_KEY", "HR_SYSTEM_API"] },
-        "primaryEnv": "DIRECTORY_API_KEY",
-        "emoji": "🔑",
-      },
+    "openclaw": {
+      "always": true,
+      "requires": { "env": ["DIRECTORY_API_KEY", "HR_SYSTEM_API"] },
+      "primaryEnv": "DIRECTORY_API_KEY",
+      "emoji": "🔑"
+    }
   }
 ---
 
 # Provisioner Skill
 
-Provision and deprovision user access across enterprise systems.
+Provision and deprovision user access across enterprise identity systems.
 
 ## When to Use
 
@@ -36,7 +37,6 @@ Provision and deprovision user access across enterprise systems.
 ## Provisioning Workflow
 
 ### New Employee
-```
 1. Receive onboarding request from HR
 2. Verify employee in HR system
 3. Create account in identity provider
@@ -45,20 +45,16 @@ Provision and deprovision user access across enterprise systems.
 6. Configure MFA
 7. Send welcome credentials securely
 8. Log provisioning completion
-```
 
 ### Access Request
-```
 1. Receive access request
 2. Verify manager approval
 3. Check against least-privilege policy
 4. Grant requested access
 5. Document in access log
 6. Notify user of access granted
-```
 
 ### Offboarding
-```
 1. Receive offboarding notice from HR
 2. Disable account immediately
 3. Remove all group memberships
@@ -66,7 +62,6 @@ Provision and deprovision user access across enterprise systems.
 5. Revoke API keys and tokens
 6. Disable MFA
 7. Document deprovisioning complete
-```
 
 ## Supported Systems
 

@@ -1,15 +1,17 @@
-# USER.md - IT Security & HR Teams
+# USER.md - Access Management User Profile
 
 ## Who You Help
 
-You help the **IT Security Team**, **HR Department**, and **Department Managers** manage access controls.
+You help the **IT Security Team**, **HR Department**, and **Department Managers** manage access controls across the organization.
 
 ## Primary Contacts
 
-- **IT Security Lead**: Access policy decisions
-- **HR Director**: Employee lifecycle access changes
-- **Department Managers**: Team access requests
-- **CISO**: High-risk access decisions
+| Role | Responsibility | Channel |
+|------|---------------|---------|
+| IT Security Lead | Access policy decisions | Slack + Email |
+| HR Director | Employee lifecycle access changes | Slack + Email |
+| Department Managers | Team access requests | Slack |
+| CISO | High-risk access decisions | Slack + Phone |
 
 ## Communication Preferences
 
@@ -26,16 +28,26 @@ You help the **IT Security Team**, **HR Department**, and **Department Managers*
 
 ## Important Context
 
-- Organization uses [IDENTITY_PROVIDER] for authentication
-- Primary systems: [LIST_SSO_AD_LDAP]
-- MFA is [REQUIRED/OPTIONAL] for all users
-- Access review cadence: [QUARTERLY/MONTHLY]
+- **Identity Provider**: [IDENTITY_PROVIDER]
+- **SSO/AD/LDAP**: [LIST_SSO_AD_LDAP]
+- **MFA Policy**: [REQUIRED/OPTIONAL] for all users
+- **Access Review Cadence**: Quarterly
 
-## Escalation Contacts
+## Escalation Matrix
 
-| Issue Type | Contact | Channel |
-|------------|---------|---------|
-| Security incidents | CISO | Slack + Phone |
-| Policy exceptions | IT Security Lead | Email |
-| Employee disputes | HR Director | Slack |
-| Urgent | IT Manager | Phone |
+| Issue Type | Contact | Channel | SLA |
+|------------|---------|---------|-----|
+| Security incidents | CISO | Slack + Phone | Immediate |
+| Policy exceptions | IT Security Lead | Email | 24 hours |
+| Employee disputes | HR Director | Slack | 48 hours |
+| Urgent deprovisioning | IT Manager | Phone | 4 hours |
+| Access request questions | IT Security | Slack | 24 hours |
+
+## Approval Authority
+
+| Access Level | Required Approver |
+|--------------|-----------------|
+| Standard | Manager |
+| Elevated | Manager + IT Security |
+| Privileged | IT Security Lead |
+| Admin | CISO |

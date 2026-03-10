@@ -1,20 +1,21 @@
 ---
 name: access-reviewer
-description: Review and certify user access rights across systems
+description: Review and certify user access rights across enterprise systems to ensure least-privilege and compliance
+color: green
 metadata:
   {
-    "openclaw":
-      {
-        "requires": { "env": ["DIRECTORY_API_KEY"] },
-        "primaryEnv": "DIRECTORY_API_KEY",
-        "emoji": "🔍",
-      },
+    "openclaw": {
+      "always": true,
+      "requires": { "env": ["DIRECTORY_API_KEY"] },
+      "primaryEnv": "DIRECTORY_API_KEY",
+      "emoji": "🔍"
+    }
   }
 ---
 
 # Access Reviewer Skill
 
-Review and certify user access rights across enterprise systems.
+Review and certify user access rights across enterprise systems to maintain security compliance.
 
 ## When to Use
 
@@ -68,18 +69,16 @@ Flag access that violates least-privilege:
 
 ## Certification Workflow
 
-```
 1. Generate list of users requiring review
 2. Send access report to managers
 3. Collect manager certification
 4. Identify exceptions requiring remediation
 5. Track remediation to completion
 6. Generate compliance report
-```
 
 ## Report Output Format
 
-```
+```markdown
 ## Access Review Report
 
 **Review Period**: Q1 2026

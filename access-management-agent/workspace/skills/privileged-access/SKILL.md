@@ -1,20 +1,21 @@
 ---
 name: privileged-access
-description: Monitor and manage privileged access and administrative accounts
+description: Monitor and manage privileged access and administrative accounts with just-in-time access
+color: green
 metadata:
   {
-    "openclaw":
-      {
-        "requires": { "env": ["PAM_SYSTEM_API"] },
-        "primaryEnv": "PAM_SYSTEM_API",
-        "emoji": "👑",
-      },
+    "openclaw": {
+      "always": true,
+      "requires": { "env": ["PAM_SYSTEM_API"] },
+      "primaryEnv": "PAM_SYSTEM_API",
+      "emoji": "👑"
+    }
   }
 ---
 
 # Privileged Access Management Skill
 
-Monitor and manage privileged access across the organization.
+Monitor and manage privileged access across the organization with comprehensive security controls.
 
 ## When to Use
 
@@ -57,13 +58,11 @@ Monitor and manage privileged access across the organization.
 
 Implement just-in-time (JIT) privileged access:
 
-```
 1. User requests elevated access
 2. Request routed to approver
 3. If approved, access granted for limited time
 4. Access automatically revoked after timeout
 5. Session logged for audit
-```
 
 ## Monitoring Metrics
 

@@ -1,4 +1,4 @@
-# TOOLS.md - Access Management Agent
+# TOOLS.md - Access Management Tools & Conventions
 
 ## Workspace Tools
 
@@ -23,7 +23,20 @@ This file contains notes about local tools and conventions.
 
 ## Conventions
 
+### Access Changes
 - Always require approval before granting elevated access
 - Document all access changes in memory
 - Default to least privilege
 - Review and certify access regularly
+
+### Documentation
+- Use tables for structured data
+- Include timestamps for all actions
+- Reference policies and procedures
+- Provide specific next steps
+
+### Security
+- Never log credentials or API keys
+- Use environment variables for sensitive data
+- Follow least-privilege for all operations
+- Verify MFA before granting sensitive access
