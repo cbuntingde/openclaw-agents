@@ -1,6 +1,6 @@
-# Enterprise Agents
+> Note: These agents haven't been fully tested yet, so they may not install or run perfectly out of the box. If you run into any issues, feel free to open a new issue!
 
-**All agents in this repository were created by Chris Bunting.**
+# Enterprise Agents
 
 A comprehensive collection of **57 professional AI agents** for the [OpenClaw](https://docs.openclaw.ai) platform, designed to automate enterprise workflows across every business function.
 
@@ -19,7 +19,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 
 ## Agent Catalog
 
-### Finance & Accounting
+### Finance-And-Accounting
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
@@ -46,7 +46,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 | onboarding-specialist-agent | account-provisioner, welcome-sequencer, task-tracker, feedback-collector | Employee onboarding |
 | employee-experience-agent | sentiment-monitor, recognition-manager, request-handler | Employee experience management |
 
-### IT & DevOps
+### IT-And-DevOps
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
@@ -59,7 +59,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 | backup-recovery-agent | backup-monitor, recovery-tester, retention-manager | Backup and recovery |
 | bug-triage-agent | bug-prioritizer, severity-assigner, assignee-recommender | Bug triage |
 
-### Legal & Compliance
+### Legal-And-Compliance
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
@@ -81,7 +81,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 | ticket-routing-agent | ticket-triage, prioritizer, team-assigner | Support ticket routing |
 | user-feedback-agent | feedback-collector, sentiment-analyzer, feature-request-tracker | User feedback |
 
-### Product & Analytics
+### Product-And-Analytics
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
@@ -92,7 +92,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 | seo-agent | keyword-tracker, content-optimizer, ranking-monitor | SEO management |
 | social-media-agent | post-scheduler, engagement-monitor, sentiment-tracker | Social media management |
 
-### Executive & Strategy
+### Executive-And-Strategy
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
@@ -115,11 +115,28 @@ Each agent is a fully self-contained OpenClaw workspace with:
 | vendor-management-agent | sla-monitor, security-tracker, risk-assessor | Vendor management |
 | knowledge-base-curator-agent | gap-detector, freshness-tracker, faq-generator, content-suggester | Knowledge base management |
 
-### Access & Identity
+### Access-And-Identity
 
 | Agent | Skills | Description |
 |-------|--------|-------------|
 | access-management-agent | provisioner, access-reviewer, privileged-access | Access management |
+
+## Directory Structure
+
+Agents are organized into category directories:
+
+```
+openclaw-agents/
+├── Finance-And-Accounting/    # 9 agents
+├── Human-Resources/          # 8 agents
+├── IT-And-DevOps/            # 8 agents
+├── Legal-And-Compliance/     # 7 agents
+├── Customer-Service/         # 5 agents
+├── Product-And-Analytics/    # 6 agents
+├── Executive-And-Strategy/   # 5 agents
+├── Operations/               # 8 agents
+└── Access-And-Identity/     # 1 agent
+```
 
 ## Quick Start
 
@@ -135,7 +152,7 @@ Each agent is a fully self-contained OpenClaw workspace with:
 git clone https://github.com/cbuntingde/enterprise-agents.git
 
 # Choose an agent and copy to your OpenClaw workspace
-cp -r treasury-agent/workspace/* ~/.openclaw/workspace/
+cp -r Finance-And-Accounting/treasury-agent/workspace/* ~/.openclaw/workspace/
 
 # Configure the agent in ~/.openclaw/openclaw.json
 ```
@@ -221,8 +238,10 @@ MIT License - See individual agent directories for details.
 
 ---
 
-**Total: 57 agents, 200+ skills**
+## Support
+
+If you find these useful, consider [sponsoring](https://github.com/sponsors/cbuntingde) the project.
 
 ---
 
-Copyright (c) 2026 Chris Bunting. All rights reserved.
+Copyright © 2026 Created by Chris Bunting
